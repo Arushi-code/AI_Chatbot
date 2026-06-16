@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # AI Chatbot Using NLP and Deep Learning
 
 An internship-ready Python project that builds a simple FAQ and conversational chatbot using NLP preprocessing, deep learning based intent classification, lightweight entity recognition, optional LLM fallback responses, and Flask deployment.
@@ -180,6 +181,9 @@ python train.py
 - Integrate an LLM fallback module
 - Connect ML inference with a Flask web app
 - Package an AI project in a clear, reusable structure
+=======
+# AI_Chatbot
+>>>>>>> 6352fed086e71c69ff0125b812996abd4982d26d
 =======
 # AI_Chatbot
 >>>>>>> 6352fed086e71c69ff0125b812996abd4982d26d
