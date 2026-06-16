@@ -12,7 +12,7 @@ The objective of this project is to develop an AI chatbot that can answer freque
 
 Many users need quick answers to common questions without waiting for human support. A chatbot can automate these interactions by understanding user messages, identifying the user's intent, extracting useful entities, and generating an appropriate response.
 
-## 4. Proposed Solution
+## 4. Proposed Solution for this problem statement
 
 This project uses a neural network intent classifier trained on predefined conversational patterns. The chatbot processes the user's text, predicts the intent, extracts simple entities, and returns a response from the matching intent category. If the classifier confidence is low, the system can use an LLM fallback to generate a more flexible answer.
 
