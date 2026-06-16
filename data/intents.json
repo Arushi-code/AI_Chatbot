@@ -1,0 +1,209 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "Good morning",
+        "Good evening",
+        "Are you there?",
+        "Is anyone there?",
+        "Can you help me?"
+      ],
+      "responses": [
+        "Hello! I am here to help.",
+        "Hi! Ask me anything about this chatbot project or start with a simple greeting.",
+        "Hey! I am ready to chat."
+      ]
+    },
+    {
+      "tag": "small_talk",
+      "patterns": [
+        "How are you?",
+        "How are you doing?",
+        "How is it going?",
+        "How do you do?",
+        "What's up?",
+        "What is up?",
+        "How are things?",
+        "Are you okay?",
+        "How do you feel?"
+      ],
+      "responses": [
+        "I am doing well and ready to help with your chatbot project.",
+        "I am working smoothly. You can ask me project questions whenever you are ready.",
+        "I am doing great. How can I help you today?"
+      ]
+    },
+    {
+      "tag": "bot_identity",
+      "patterns": [
+        "Who are you?",
+        "What are you?",
+        "Tell me about yourself",
+        "What can you do?",
+        "Are you a chatbot?",
+        "Introduce yourself"
+      ],
+      "responses": [
+        "I am an AI internship chatbot built with NLP, deep learning, Flask, and optional LLM support.",
+        "I am a project chatbot that can answer FAQs, classify intents, extract simple entities, and help explain the project."
+      ]
+    },
+    {
+      "tag": "bot_status",
+      "patterns": [
+        "Are you working?",
+        "Are you online?",
+        "Are you active?",
+        "Can you respond?",
+        "Are you available?"
+      ],
+      "responses": [
+        "Yes, I am online and ready to answer your questions.",
+        "I am active. You can ask me about AI, NLP, deep learning, the project workflow, or internship preparation."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "Goodbye",
+        "See you later",
+        "Talk to you later",
+        "I am leaving"
+      ],
+      "responses": [
+        "Goodbye! Keep building and experimenting.",
+        "See you later. Good luck with your AI project!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That helped",
+        "Thanks a lot",
+        "I appreciate it"
+      ],
+      "responses": [
+        "You are welcome!",
+        "Glad I could help."
+      ]
+    },
+    {
+      "tag": "ai_definition",
+      "patterns": [
+        "What is artificial intelligence?",
+        "Define AI",
+        "What is AI?",
+        "Explain artificial intelligence",
+        "Tell me about AI"
+      ],
+      "responses": [
+        "Artificial Intelligence is the field of building systems that can perform tasks requiring human-like intelligence, such as learning, reasoning, and language understanding.",
+        "AI allows machines to learn from data and make decisions or predictions."
+      ]
+    },
+    {
+      "tag": "nlp_definition",
+      "patterns": [
+        "What is NLP?",
+        "Explain natural language processing",
+        "Define NLP",
+        "What does NLP mean?",
+        "How does NLP work?"
+      ],
+      "responses": [
+        "Natural Language Processing is a branch of AI that helps computers understand, process, and generate human language.",
+        "NLP combines linguistics, machine learning, and deep learning to work with text and speech."
+      ]
+    },
+    {
+      "tag": "deep_learning",
+      "patterns": [
+        "What is deep learning?",
+        "How is deep learning used?",
+        "Explain neural networks",
+        "Why use TensorFlow?",
+        "What is Keras?"
+      ],
+      "responses": [
+        "Deep learning uses neural networks with multiple layers to learn patterns from data. In this project, it classifies user messages into intents.",
+        "TensorFlow and Keras help build and train the neural network used by the chatbot."
+      ]
+    },
+    {
+      "tag": "project_workflow",
+      "patterns": [
+        "How does this chatbot work?",
+        "Explain the project workflow",
+        "What are the modules?",
+        "How is the chatbot trained?",
+        "Describe the architecture"
+      ],
+      "responses": [
+        "The chatbot preprocesses text, converts it to bag-of-words features, predicts the intent using a neural network, extracts simple entities, and returns a suitable response.",
+        "The main modules are NLP preprocessing, intent classification, entity recognition, response generation, and Flask deployment."
+      ]
+    },
+    {
+      "tag": "project_tools",
+      "patterns": [
+        "What tools are used?",
+        "Which technologies are used?",
+        "What is the tech stack?",
+        "Do you use Flask?",
+        "Do you use Python?"
+      ],
+      "responses": [
+        "This project uses Python, NLTK, TensorFlow/Keras, NumPy, and Flask.",
+        "The tech stack includes NLP with NLTK, deep learning with Keras, and deployment with Flask."
+      ]
+    },
+    {
+      "tag": "entity_recognition",
+      "patterns": [
+        "Can you identify my email?",
+        "Can you extract entities?",
+        "What entities can you find?",
+        "My email is student@example.com",
+        "Call me Rahul"
+      ],
+      "responses": [
+        "Yes. I can extract simple entities such as names, emails, phone numbers, dates, times, and AI-related topics.",
+        "This project includes lightweight entity recognition using regex and keyword rules."
+      ]
+    },
+    {
+      "tag": "internship_apply",
+      "patterns": [
+        "I want to apply for an internship",
+        "How can I apply for internship?",
+        "Can you help with internship?",
+        "I need internship guidance",
+        "What should I include in my resume?"
+      ],
+      "responses": [
+        "For an AI internship, highlight Python, machine learning basics, NLP projects, GitHub links, and clear documentation.",
+        "Build a clean project, write a strong README, add screenshots, and explain your model, dataset, and results."
+      ]
+    },
+    {
+      "tag": "fallback",
+      "patterns": [
+        "I do not understand",
+        "Random question",
+        "Something else",
+        "Unknown topic"
+      ],
+      "responses": [
+        "I am still learning. Please ask about AI, NLP, deep learning, chatbot architecture, tools, or internships.",
+        "I do not have enough information for that yet. Try asking a project-related FAQ."
+      ]
+    }
+  ]
+}

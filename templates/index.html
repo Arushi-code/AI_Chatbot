@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeuroFAQ | AI Internship Chatbot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="NeuroFAQ home">
+      <span class="brand-mark">N</span>
+      <span>NeuroFAQ</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#chat">Chatbot</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#modules">Modules</a>
+      <a href="#examples">Examples</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero-section" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <p class="eyebrow">AI Internship Project</p>
+        <h1 id="heroTitle">AI Chatbot Using NLP, Deep Learning, and LLMs</h1>
+        <p class="hero-text">
+          A deployable Flask chatbot that classifies intents with a Keras neural network,
+          extracts entities with NLP rules, and uses an optional LLM fallback for flexible conversations.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-action" href="#chat">Try Chatbot</a>
+          <a class="secondary-action" href="#architecture">View Workflow</a>
+        </div>
+      </div>
+
+      <section id="chat" class="chat-panel" aria-label="AI Chatbot">
+        <header class="chat-header">
+          <div>
+            <p class="eyebrow">Live Demo</p>
+            <h2>Project Chatbot</h2>
+          </div>
+          <span class="status">Online</span>
+        </header>
+
+        <div id="chatMessages" class="chat-messages">
+          <article class="message bot">
+            <p>Hello! Ask me about AI, NLP, deep learning, chatbot workflow, tools, viva questions, or internship guidance.</p>
+          </article>
+        </div>
+
+        <form id="chatForm" class="chat-form">
+          <input id="messageInput" type="text" placeholder="Ask about the project..." autocomplete="off" required>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </section>
+
+    <section class="metrics-band" aria-label="Project highlights">
+      <div>
+        <strong>11</strong>
+        <span>Intent Classes</span>
+      </div>
+      <div>
+        <strong>56</strong>
+        <span>Training Patterns</span>
+      </div>
+      <div>
+        <strong>3</strong>
+        <span>Response Sources</span>
+      </div>
+      <div>
+        <strong>5</strong>
+        <span>NLP Entities</span>
+      </div>
+    </section>
+
+    <section class="content-grid">
+      <aside class="insight-panel" aria-label="Prediction details">
+        <p class="eyebrow">Model Output</p>
+        <h2>Live Inference Trace</h2>
+        <dl>
+          <div>
+            <dt>Intent</dt>
+            <dd id="intentValue">-</dd>
+          </div>
+          <div>
+            <dt>Confidence</dt>
+            <dd id="confidenceValue">-</dd>
+          </div>
+          <div>
+            <dt>Entities</dt>
+            <dd id="entitiesValue">-</dd>
+          </div>
+          <div>
+            <dt>Response Source</dt>
+            <dd id="sourceValue">-</dd>
+          </div>
+        </dl>
+      </aside>
+
+      <section id="architecture" class="workflow-section" aria-labelledby="workflowTitle">
+        <p class="eyebrow">Architecture</p>
+        <h2 id="workflowTitle">Hybrid Chatbot Workflow</h2>
+        <div class="workflow">
+          <div class="workflow-step">
+            <span>1</span>
+            <h3>User Message</h3>
+            <p>Input is collected through the Flask web interface.</p>
+          </div>
+          <div class="workflow-step">
+            <span>2</span>
+            <h3>NLP Processing</h3>
+            <p>NLTK tokenizes, cleans, and lemmatizes the sentence.</p>
+          </div>
+          <div class="workflow-step">
+            <span>3</span>
+            <h3>Intent Model</h3>
+            <p>Keras predicts the most likely FAQ or conversation intent.</p>
+          </div>
+          <div class="workflow-step">
+            <span>4</span>
+            <h3>Entity Rules</h3>
+            <p>Regex and keyword rules extract names, emails, dates, times, and topics.</p>
+          </div>
+          <div class="workflow-step">
+            <span>5</span>
+            <h3>Response Engine</h3>
+            <p>Confident matches use prepared answers; uncertain queries can use the LLM fallback.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="modules" class="module-section" aria-labelledby="modulesTitle">
+      <p class="eyebrow">Project Modules</p>
+      <h2 id="modulesTitle">What The Website Demonstrates</h2>
+      <div class="module-grid">
+        <article>
+          <h3>NLP Preprocessing</h3>
+          <p>Tokenization, lemmatization, and bag-of-words vector generation prepare text for the model.</p>
+        </article>
+        <article>
+          <h3>Deep Learning</h3>
+          <p>A TensorFlow/Keras neural network classifies user messages into intent categories.</p>
+        </article>
+        <article>
+          <h3>Entity Recognition</h3>
+          <p>Lightweight extraction identifies useful values such as email, phone, date, time, name, and topics.</p>
+        </article>
+        <article>
+          <h3>LLM Fallback</h3>
+          <p>OpenAI-powered fallback improves flexible answers when the intent model is not confident.</p>
+        </article>
+        <article>
+          <h3>Flask API</h3>
+          <p>The `/chat` endpoint connects the website to the chatbot engine.</p>
+        </article>
+        <article>
+          <h3>Training Dataset</h3>
+          <p>The editable JSON intent file makes it simple to expand FAQs and retrain the model.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="examples" class="examples-section" aria-labelledby="examplesTitle">
+      <div>
+        <p class="eyebrow">Try These</p>
+        <h2 id="examplesTitle">Example Questions</h2>
+      </div>
+      <div class="prompt-groups">
+        <div>
+          <h3>Greetings</h3>
+          <div class="prompt-list">
+            <button type="button" data-prompt="Hello">Hello</button>
+            <button type="button" data-prompt="How are you doing?">How are you doing?</button>
+            <button type="button" data-prompt="Who are you?">Who are you?</button>
+          </div>
+        </div>
+        <div>
+          <h3>Project Questions</h3>
+          <div class="prompt-list">
+            <button type="button" data-prompt="What is NLP?">What is NLP?</button>
+            <button type="button" data-prompt="How does this chatbot work?">How does this chatbot work?</button>
+            <button type="button" data-prompt="Explain this project for my viva">Explain this project for my viva</button>
+            <button type="button" data-prompt="My email is student@example.com">My email is student@example.com</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built with Python, NLTK, TensorFlow/Keras, Flask, and optional OpenAI LLM integration.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById("chatForm");
+    const input = document.getElementById("messageInput");
+    const messages = document.getElementById("chatMessages");
+    const intentValue = document.getElementById("intentValue");
+    const confidenceValue = document.getElementById("confidenceValue");
+    const entitiesValue = document.getElementById("entitiesValue");
+    const sourceValue = document.getElementById("sourceValue");
+    const promptButtons = document.querySelectorAll("[data-prompt]");
+
+    function escapeHtml(value) {
+      return value.replace(/[&<>"']/g, (character) => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        "\"": "&quot;",
+        "'": "&#039;"
+      }[character]));
+    }
+
+    function addMessage(text, type) {
+      const item = document.createElement("article");
+      item.className = `message ${type}`;
+      item.innerHTML = `<p>${escapeHtml(text)}</p>`;
+      messages.appendChild(item);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    async function sendMessage(message) {
+      addMessage(message, "user");
+
+      const response = await fetch("/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message })
+      });
+
+      const data = await response.json();
+      addMessage(data.response, "bot");
+      intentValue.textContent = data.intent || "-";
+      confidenceValue.textContent = data.confidence ?? "-";
+      entitiesValue.textContent = Object.keys(data.entities || {}).length
+        ? JSON.stringify(data.entities, null, 2)
+        : "-";
+      sourceValue.textContent = data.source || "-";
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const message = input.value.trim();
+      if (!message) return;
+      input.value = "";
+      await sendMessage(message);
+    });
+
+    promptButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        input.value = button.dataset.prompt;
+        input.focus();
+        document.getElementById("chat").scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+    });
+  </script>
+</body>
+</html>
