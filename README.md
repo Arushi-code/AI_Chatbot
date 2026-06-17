@@ -2,6 +2,8 @@
 
 An internship-ready Python project that builds a simple FAQ and conversational chatbot using NLP preprocessing, deep learning-based intent classification, lightweight entity recognition, optional LLM fallback responses, and live web deployments via Flask and Streamlit.
 
+🚀 **[Live Interactive Demo](https://myprojectaichatbot.streamlit.app/)**
+
 ## 🎯 Project Goal
 
 Develop an interactive AI chatbot capable of answering FAQs and carrying out contextual conversations using robust Natural Language Processing (NLP) techniques and deep learning classifiers.
