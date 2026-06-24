@@ -1,29 +1,22 @@
-from flask import Flask, jsonify, render_template, request
-
+import streamlit as st
 from chatbot.engine import ChatbotEngine
 
+st.set_page_config(page_title="AI Chatbot", layout="centered")
 
-app = Flask(__name__)
+st.title("🤖 AI Chatbot")
+
 bot = ChatbotEngine()
 
+if "chat_history" not in st.session_state:
+    st.session_state.chat_history = []
 
-@app.get("/")
-def index():
-    return render_template("index.html")
+user_input = st.text_input("You:")
 
+if user_input:
+    response = bot.get_response(user_input)
 
-@app.post("/chat")
-def chat():
-    payload = request.get_json(silent=True) or {}
-    message = payload.get("message", "").strip()
+    st.session_state.chat_history.append(("You", user_input))
+    st.session_state.chat_history.append(("Bot", response))
 
-    if not message:
-        return jsonify({"response": "Please type a message so I can help.", "intent": None, "entities": {}})
-
-    result = bot.reply(message)
-    return jsonify(result)
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
-
+for sender, msg in st.session_state.chat_history:
+    st.write(f"**{sender}:** {msg}")
