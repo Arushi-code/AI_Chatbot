@@ -5,6 +5,7 @@ import re
 from pathlib import Path
 
 import numpy as np
+from tensorflow.keras.models import load_model
 
 from chatbot.llm_helper import LLMHelper
 from chatbot.nlp_utils import bag_of_words, ensure_nltk_data
