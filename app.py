@@ -13,7 +13,8 @@ if "chat_history" not in st.session_state:
 user_input = st.text_input("You:")
 
 if user_input:
-    response = bot.get_response(user_input)
+    result = bot.reply(user_input)
+    response = result["response"]
 
     st.session_state.chat_history.append(("You", user_input))
     st.session_state.chat_history.append(("Bot", response))
