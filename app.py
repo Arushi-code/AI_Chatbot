@@ -1,23 +1,45 @@
 import streamlit as st
 from chatbot.engine import ChatbotEngine
 
-st.set_page_config(page_title="AI Chatbot", layout="centered")
+st.set_page_config(
+    page_title="AI Chatbot",
+    page_icon="🤖",
+    layout="wide"
+)
 
-st.title("🤖 AI Chatbot")
+# ---------------- Sidebar ----------------
+with st.sidebar:
+    st.title("🤖 AI Chatbot")
+    st.markdown("### About")
+    st.write("This is an AI chatbot using NLP + ML + fallback LLM.")
+    
+    if st.button("Clear Chat"):
+        st.session_state.chat_history = []
+
+# ---------------- Main UI ----------------
+st.title("💬 Chat Assistant")
 
 bot = ChatbotEngine()
 
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
 
-user_input = st.text_input("You:")
+# ---------------- Chat Input ----------------
+user_input = st.chat_input("Type your message...")
 
+# ---------------- Response Handling ----------------
 if user_input:
     result = bot.reply(user_input)
-    response = result["response"]
+    bot_response = result["response"]
 
-    st.session_state.chat_history.append(("You", user_input))
-    st.session_state.chat_history.append(("Bot", response))
+    st.session_state.chat_history.append(("user", user_input))
+    st.session_state.chat_history.append(("bot", bot_response))
 
-for sender, msg in st.session_state.chat_history:
-    st.write(f"**{sender}:** {msg}")
+# ---------------- Chat Display ----------------
+for role, message in st.session_state.chat_history:
+    if role == "user":
+        with st.chat_message("user"):
+            st.markdown(f"**You:** {message}")
+    else:
+        with st.chat_message("assistant"):
+            st.markdown(f"**Bot:** {message}")
