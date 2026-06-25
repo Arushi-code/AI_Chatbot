@@ -1,7 +1,6 @@
 flask
 nltk
 numpy
-tensorflow
 openai
 python-dotenv
 streamlit
