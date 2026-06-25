@@ -101,4 +101,8 @@ for role, message, timestamp in st.session_state.chat_history:
     else:
         with st.chat_message("assistant"):
             st.markdown(message)
+<<<<<<< HEAD
             st.caption(timestamp)
+=======
+            st.caption(timestamp)
+>>>>>>> 4e9049d (Add trained chatbot model files)
